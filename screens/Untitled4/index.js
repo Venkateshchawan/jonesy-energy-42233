@@ -26,7 +26,11 @@ const Untitled4 = () => {
         navigation.navigate("ScreenAI31");
       }}><Text style={styles.qYbkQYLX}>{"Logbooks"}</Text></Pressable><Pressable onPress={() => {
         navigation.navigate("ScreenAI32");
-      }}><Text style={styles.rLQlvKhl}>{"My Bank account"}</Text></Pressable></ScrollView>
+      }}><Text style={styles.rLQlvKhl}>{"My Bank account"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI34");
+      }}><Text style={styles.UGpXQgSs}>{"Manage SubAdmin"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI39");
+      }}><Text style={styles.wKsCqEla}>{"Account Settings"}</Text></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -77,6 +81,20 @@ const styles = StyleSheet.create({
     borderRadius: 0
   },
   rLQlvKhl: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  UGpXQgSs: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  wKsCqEla: {
     width: 100,
     height: 50,
     lineHeight: 14,
