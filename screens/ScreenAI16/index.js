@@ -24,7 +24,9 @@ const BillOfLadingsScreen = () => {
         <Text style={styles.label}>The Admin user can apply filters to narrow down the Bill of Ladings based on dates and/or Employee full name</Text>
       </View>
       <View style={styles.section}>
-        <Text style={styles.title}>Section 2</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI23");
+      }}><Text style={styles.title}>Section 2</Text></Pressable>
         <Text style={styles.label}>Bill of Lading List</Text>
         <Text style={styles.label}>The screen displays a list of all the Bill of Lading documents in a tabular format.</Text>
         <Button title="View Document Details" onPress={() => {}} />
