@@ -32,7 +32,9 @@ const Untitled4 = () => {
         navigation.navigate("ScreenAI39");
       }}><Text style={styles.wKsCqEla}>{"Account Settings"}</Text></Pressable><Pressable onPress={() => {
         navigation.navigate("ScreenAI35");
-      }}><Text style={styles.OBuIWBJV}>{"Employees Overview"}</Text></Pressable></ScrollView>
+      }}><Text style={styles.OBuIWBJV}>{"Employees Overview"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI42");
+      }}><Text style={styles.AneNcdFd}>{"Manage Clients"}</Text></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -104,6 +106,13 @@ const styles = StyleSheet.create({
     borderRadius: 0
   },
   OBuIWBJV: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  AneNcdFd: {
     width: 100,
     height: 50,
     lineHeight: 14,
