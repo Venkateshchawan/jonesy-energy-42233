@@ -18,7 +18,9 @@ const Untitled4 = () => {
         navigation.navigate("ScreenAI6");
       }}><Text style={styles.rKLLQCAO}>{"Tasks and Reminders"}</Text></Pressable><Pressable onPress={() => {
         navigation.navigate("ScreenAI8");
-      }}><Text style={styles.mtGWqcOX}>{"Safety Documents Library screen"}</Text></Pressable></ScrollView>
+      }}><Text style={styles.mtGWqcOX}>{"Safety Documents Library screen"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI16");
+      }}><Text style={styles.wLELltKP}>{"Bills of Lading Overview"}</Text></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -41,6 +43,13 @@ const styles = StyleSheet.create({
     borderRadius: 0
   },
   mtGWqcOX: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  wLELltKP: {
     width: 100,
     height: 50,
     lineHeight: 14,
