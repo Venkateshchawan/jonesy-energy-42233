@@ -40,7 +40,9 @@ const Screen = () => {
 
   return <SafeAreaView style={styles.container}>
       <View style={styles.section}>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI10");
+      }}>
           <Text style={styles.buttonText}>Safety Forms</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
