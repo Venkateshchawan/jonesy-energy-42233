@@ -45,7 +45,9 @@ const Screen = () => {
       }}>
           <Text style={styles.buttonText}>Safety Forms</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity style={styles.button} onPress={() => {
+        navigation.navigate("ScreenAI15");
+      }}>
           <Text style={styles.buttonText}>Submitted Safety Forms</Text>
         </TouchableOpacity>
       </View>
