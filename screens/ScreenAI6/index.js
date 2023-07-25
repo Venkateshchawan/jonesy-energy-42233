@@ -1,7 +1,9 @@
+import { useNavigation } from "@react-navigation/native";
 import React from 'react';
 import { View, Text, SafeAreaView, TouchableOpacity } from 'react-native';
 
 const Screen = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.calendarContainer}>
         <Text style={styles.calendarTitle}>Calendar</Text>
@@ -9,7 +11,9 @@ const Screen = () => {
           <Text style={styles.calendarText}>Year</Text>
           <Text style={styles.calendarText}>Month</Text>
           <Text style={styles.calendarText}>Day</Text>
-          <TouchableOpacity style={styles.addTaskButton}>
+          <TouchableOpacity style={styles.addTaskButton} onPress={() => {
+          navigation.navigate("ScreenAI7");
+        }}>
             <Text style={styles.addTaskButtonText}>Add Task</Text>
           </TouchableOpacity>
         </View>

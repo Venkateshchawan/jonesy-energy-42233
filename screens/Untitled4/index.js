@@ -16,7 +16,9 @@ const Untitled4 = () => {
         navigation.navigate("ScreenAI5");
       }}><Text style={styles.qxwiKxMc}>{"Notification"}</Text></Pressable><Pressable onPress={() => {
         navigation.navigate("ScreenAI6");
-      }}><Text style={styles.rKLLQCAO}>{"Tasks and Reminders"}</Text></Pressable></ScrollView>
+      }}><Text style={styles.rKLLQCAO}>{"Tasks and Reminders"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI8");
+      }}><Text style={styles.mtGWqcOX}>{"Safety Documents Library screen"}</Text></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -32,6 +34,13 @@ const styles = StyleSheet.create({
     borderRadius: 0
   },
   rKLLQCAO: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  mtGWqcOX: {
     width: 100,
     height: 50,
     lineHeight: 14,
