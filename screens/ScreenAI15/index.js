@@ -1,11 +1,13 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from "react";
 import { SafeAreaView, View, Text, TextInput, Button, FlatList, TouchableOpacity } from "react-native";
 
 const Screen = () => {
+  const navigation = useNavigation();
   const [keyword, setKeyword] = useState("");
   const [fromDate, setFromDate] = useState("");
   const [toDate, setToDate] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState("");
   const [safetyForms, setSafetyForms] = useState([{
     id: 1,
     title: "Safety Form 1",
@@ -42,7 +44,7 @@ const Screen = () => {
       <Button title="View Details" onPress={() => handleViewDetails(item.id)} />
     </TouchableOpacity>;
 
-  const handleViewDetails = id => {// Implement view details functionality here
+  const handleViewDetails = () => {// Implement view details functionality here
   };
 
   return <SafeAreaView style={styles.container}>
@@ -62,7 +64,9 @@ const Screen = () => {
         {
         /* Implement categories here */
       }
-        <Text style={styles.category}>Category 1</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI14");
+      }}><Text style={styles.category}>Category 1</Text></Pressable>
         <Text style={styles.category}>Category 2</Text>
         <Text style={styles.category}>Category 3</Text>
       </View>
