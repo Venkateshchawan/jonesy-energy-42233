@@ -8,7 +8,9 @@ const BillOfLadingsScreen = () => {
   const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.section}>
-        <Text style={styles.title}>Bill of Ladings Forms</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI22");
+      }}><Text style={styles.title}>Bill of Ladings Forms</Text></Pressable>
         <Button title="Submit a Bill of Landing" onPress={() => {}} style={_styles.MywGBScO} />
       </View>
       <View style={styles.section}>
