@@ -14,7 +14,9 @@ const Untitled4 = () => {
       flex: 1
     }}><Pressable onPress={() => {
         navigation.navigate("ScreenAI5");
-      }}><Text style={styles.qxwiKxMc}>{"Notification"}</Text></Pressable></ScrollView>
+      }}><Text style={styles.qxwiKxMc}>{"Notification"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI6");
+      }}><Text style={styles.rKLLQCAO}>{"Tasks and Reminders"}</Text></Pressable></ScrollView>
     </SafeAreaView>;
 };
 
@@ -23,6 +25,13 @@ const styles = StyleSheet.create({
     height: '100%'
   },
   qxwiKxMc: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 14,
+    borderRadius: 0
+  },
+  rKLLQCAO: {
     width: 100,
     height: 50,
     lineHeight: 14,
