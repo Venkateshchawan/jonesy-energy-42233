@@ -1,6 +1,6 @@
 import axios from "axios"
 const polishedtruthAPI = axios.create({
-  baseURL: "https://jonesey-energy-42233.botics.co",
+  baseURL: "https://jonesy-energy-42233.botics.co",
   headers: { Accept: "application/json", "Content-Type": "application/json" }
 })
 function api_docs_schema_retrieve(payload) {
