@@ -1,7 +1,10 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, SafeAreaView, StyleSheet } from 'react-native';
 
 const EmployeeScreen = () => {
+  const navigation = useNavigation();
   const [searchKeyword, setSearchKeyword] = useState('');
 
   const handleSearch = () => {// Perform search logic here
@@ -10,7 +13,7 @@ const EmployeeScreen = () => {
   const handleAddEmployee = () => {// Perform add employee logic here
   };
 
-  const handleSeeDetails = employeeId => {// Perform see details logic here
+  const handleSeeDetails = () => {// Perform see details logic here
   };
 
   return <SafeAreaView style={styles.container}>
@@ -35,7 +38,11 @@ const EmployeeScreen = () => {
           <Text style={styles.employeeEmail}>john.doe@example.com</Text>
           <Button title="See Details" onPress={() => handleSeeDetails(1)} />
         </View>
-      </View>
+      <Pressable onPress={() => {
+        navigation.navigate("ScreenAI37");
+      }}><Text style={styles.WTzQqtXf}>{"1"}</Text></Pressable><Pressable onPress={() => {
+        navigation.navigate("ScreenAI391");
+      }}><Text style={styles.uollJrWU}>{"2"}</Text></Pressable></View>
     </SafeAreaView>;
 };
 
@@ -92,6 +99,20 @@ const styles = StyleSheet.create({
   employeeEmail: {
     fontSize: 16,
     marginBottom: 8
+  },
+  WTzQqtXf: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 5,
+    borderRadius: 0
+  },
+  uollJrWU: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 5,
+    borderRadius: 0
   }
 });
 export default EmployeeScreen;
