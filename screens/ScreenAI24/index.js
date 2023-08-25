@@ -1,3 +1,6 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
+import { StyleSheet } from "react-native";
 import React from 'react';
 import { SafeAreaView, View, Text, Button, TextInput, FlatList, TouchableOpacity } from 'react-native';
 const invoices = [{
@@ -24,6 +27,8 @@ const invoices = [{
 }];
 
 const InvoiceScreen = () => {
+  const navigation = useNavigation();
+
   const renderInvoiceItem = ({
     item
   }) => <TouchableOpacity onPress={() => handleInvoicePress(item)}>
@@ -36,7 +41,7 @@ const InvoiceScreen = () => {
       </View>
     </TouchableOpacity>;
 
-  const handleInvoicePress = invoice => {// Navigate to invoice details screen
+  const handleInvoicePress = () => {// Navigate to invoice details screen
   };
 
   return <SafeAreaView style={styles.container}>
@@ -46,7 +51,11 @@ const InvoiceScreen = () => {
       </View>
       <FlatList data={invoices} keyExtractor={item => item.id.toString()} renderItem={renderInvoiceItem} />
       <Button title="Create new Invoice" onPress={() => handleCreateInvoice()} />
-    </SafeAreaView>;
+    <Pressable onPress={() => {
+      navigation.navigate("ScreenAI27");
+    }}><Text style={_styles.eZwFFbHB}>{"1"}</Text></Pressable><Pressable onPress={() => {
+      navigation.navigate("ScreenAI25");
+    }}><Text style={_styles.XFBJGJZD}>{"2"}</Text></Pressable></SafeAreaView>;
 };
 
 const styles = {
@@ -82,3 +91,25 @@ const styles = {
   }
 };
 export default InvoiceScreen;
+
+const _styles = StyleSheet.create({
+  eZwFFbHB: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 5,
+    borderRadius: 0
+  },
+  XFBJGJZD: {
+    width: 50,
+    height: 10,
+    lineHeight: 14,
+    fontSize: 5,
+    borderRadius: 0,
+    top: 0,
+    left: 0,
+    transform: [{
+      rotate: "0deg"
+    }]
+  }
+});
