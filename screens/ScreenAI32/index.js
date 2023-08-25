@@ -1,10 +1,15 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
 import React from 'react';
 import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
 
 const Screen = () => {
+  const navigation = useNavigation();
   return <SafeAreaView style={styles.container}>
       <View style={styles.section}>
-        <Text style={styles.title}>Section 1</Text>
+        <Pressable onPress={() => {
+        navigation.navigate("ScreenAI33");
+      }}><Text style={styles.title}>Section 1</Text></Pressable>
         <Text style={styles.label}>Bank Name</Text>
         <Text style={styles.value}>Bank ABC</Text>
         <Text style={styles.label}>Account Name</Text>

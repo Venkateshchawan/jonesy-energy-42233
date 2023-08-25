@@ -1,7 +1,11 @@
+import { useNavigation } from "@react-navigation/native";
+import { Pressable } from "react-native";
+import { StyleSheet } from "react-native";
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button, SafeAreaView } from 'react-native';
 
 const Screen = () => {
+  const navigation = useNavigation();
   const [jobNumber, setJobNumber] = useState('');
   const [invoiceDetails, setInvoiceDetails] = useState('');
   const [totalAmount, setTotalAmount] = useState('');
@@ -25,7 +29,9 @@ const Screen = () => {
         <TextInput style={styles.input} placeholder="Total Amount" value={totalAmount} onChangeText={setTotalAmount} />
         <Button title="Save as Draft" onPress={handleSaveDraft} />
         <Button title="Send" onPress={handleSend} />
-      </View>
+      <Pressable onPress={() => {
+        navigation.navigate("ScreenAI26");
+      }}><Text style={_styles.wemrzgWK}>{"1"}</Text></Pressable></View>
     </SafeAreaView>;
 };
 
@@ -59,3 +65,13 @@ const styles = {
   }
 };
 export default Screen;
+
+const _styles = StyleSheet.create({
+  wemrzgWK: {
+    width: 100,
+    height: 50,
+    lineHeight: 14,
+    fontSize: 5,
+    borderRadius: 0
+  }
+});
